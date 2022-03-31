@@ -111,8 +111,24 @@ class _MyHomePageState extends State<MyHomePage> {
       //   tooltip: 'Increment',
       //   child: const Icon(Icons.add),
       // ), // This trailing comma makes auto-formatting nicer for build methods.
-      // floatingActionButton: GradientFloatingButton().withLinearGradient(onTap: (){}, iconWidget: const Icon(Icons.add), colors: [Colors.red,Colors.yellow],alignmentBegin: Alignment.bottomCenter),
-      floatingActionButton: GradientFloatingButton().withRadialGradient(onTap: (){}, iconWidget: const Icon(Icons.add), colors: [Colors.red,Colors.yellow],radius:0.4),
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          GradientFloatingButton().withLinearGradient(
+              onTap: _incrementCounter,
+              iconWidget: const Icon(Icons.add),
+              colors: [Colors.red, Colors.yellow],
+              alignmentBegin: Alignment.bottomCenter),
+          // const SizedBox(
+          //   height: 10,
+          // ),
+          // GradientFloatingButton().withRadialGradient(
+          //     onTap: _incrementCounter,
+          //     iconWidget: const Icon(Icons.add),
+          //     colors: [Colors.yellow, Colors.red],
+          //     radius: 0.4),
+        ],
+      ),
     );
   }
 }
