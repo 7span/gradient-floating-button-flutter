@@ -3,6 +3,8 @@ library gradient_floating_button;
 import 'package:flutter/material.dart';
 
 class GradientFloatingButton {
+
+  /// withLinerGradient() method will create a linear gradient background to your Floating Action Button
   Widget withLinearGradient(
       {required Function() onTap,
       required Widget iconWidget,
@@ -30,6 +32,7 @@ class GradientFloatingButton {
     );
   }
 
+  /// withRadialGradient() method will create a radial gradient background to your Floating Action Button
   Widget withRadialGradient(
       {required Function() onTap,
       required Widget iconWidget,
